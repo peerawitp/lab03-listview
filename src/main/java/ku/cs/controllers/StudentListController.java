@@ -3,14 +3,17 @@ package ku.cs.controllers;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import ku.cs.models.Student;
 import ku.cs.models.StudentList;
+import ku.cs.services.Datasource;
 import ku.cs.services.FXRouter;
-import ku.cs.services.StudentHardCodeDatasource;
+import ku.cs.services.StudentListFileDatasource;
+import ku.cs.services.StudentListHardCodeDatasource;
 
 import java.io.IOException;
 
@@ -28,11 +31,43 @@ public class StudentListController {
     private StudentList studentList;
     private Student selectedStudent;
 
+    private Datasource<StudentList> datasource;
+
+    @FXML
+    private ComboBox<String> selectDatasourceDropdown;
+
     @FXML
     public void initialize() {
         errorLabel.setText("");
         clearStudentInfo();
-        StudentHardCodeDatasource datasource = new StudentHardCodeDatasource();
+
+        // Datasource<StudentList> datasource = new StudentListHardCodeDatasource();
+        // StudentListHardCodeDatasource datasource = new StudentListHardCodeDatasource();
+        // Datasource<StudentList> datasource = new StudentListFileDatasource("data", "student-list.csv");
+        datasource = new StudentListFileDatasource("data", "student-list.csv");
+
+        selectDatasourceDropdown.getItems().addAll("Hardcode", "File");
+        selectDatasourceDropdown.setValue("File");
+
+        selectDatasourceDropdown.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override public void changed(ObservableValue<? extends String> selected, String oldSelect, String newSelect) {
+                if (newSelect != null) {
+                    switch(newSelect) {
+                        case "Hardcode":
+                            datasource = new StudentListHardCodeDatasource();
+                            break;
+                        case "File":
+                            datasource = new StudentListFileDatasource("data", "student-list.csv");
+                            break;
+                        default:
+                            break;
+                    }
+                    studentList = datasource.readData();
+                    showList(studentList);
+                }
+            }
+        });
+
         studentList = datasource.readData();
         showList(studentList);
         studentListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
@@ -84,6 +119,10 @@ public class StudentListController {
             try {
                 double score = Double.parseDouble(scoreText);
                 studentList.giveScoreToId(selectedStudent.getId(), score);
+
+                // เขียนข้อมูลลงในไฟล์เมื่อมีการเปลี่ยนแปลงของข้อมูล
+                datasource.writeData(studentList);
+
                 showStudentInfo(selectedStudent);
             } catch (NumberFormatException e) {
                 errorMessage = "Please insert number value";

@@ -15,7 +15,18 @@ public class StudentList {
         if (!id.equals("") && !name.equals("")) {
             Student exist = findStudentById(id);
             if (exist == null) {
-                students.add(new Student(id.trim(), name.trim()));
+                students.add(new Student(id, name));
+            }
+        }
+    }
+
+    public void addNewStudent(String id, String name, double score) {
+        id = id.trim();
+        name = name.trim();
+        if (!id.equals("") && !name.equals("")) {
+            Student exist = findStudentById(id);
+            if (exist == null) {
+                students.add(new Student(id, name, score));
             }
         }
     }
