@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1212f55-7dc3-4aa6-8c6d-d63744b09a1f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/student-list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/student-list.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ku/cs/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ku/cs/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ku/cs/controllers/StudentListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ku/cs/controllers/StudentListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ku/cs/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ku/cs/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ku/cs/models/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ku/cs/models/StudentList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ku/cs/services/StudentHardCodeDatasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ku/cs/services/StudentListHardCodeDatasource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ku/cs/lab03listview/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ku/cs/lab03listview/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ku/cs/views/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ku/cs/views/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ku/cs/views/student-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ku/cs/views/student-list.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -46,6 +43,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/Users/peerawitp/IdeaProjects/lab03-listview",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,6 +53,69 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ku.cs.models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserListTest">
+    <configuration name="UserListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javafx-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ku.cs.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ku.cs.models" />
+      <option name="MAIN_CLASS_NAME" value="ku.cs.models.UserListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserListTest.testUserListShouldReturnObjectIfUsernameAndPasswordIsCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javafx-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ku.cs.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ku.cs.models" />
+      <option name="MAIN_CLASS_NAME" value="ku.cs.models.UserListTest" />
+      <option name="METHOD_NAME" value="testUserListShouldReturnObjectIfUsernameAndPasswordIsCorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javafx-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ku.cs.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ku.cs.models" />
+      <option name="MAIN_CLASS_NAME" value="ku.cs.models.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserListTest" />
+        <item itemvalue="JUnit.UserListTest.testUserListShouldReturnObjectIfUsernameAndPasswordIsCorrect" />
+        <item itemvalue="JUnit.UserTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +127,11 @@
       <workItem from="1689840970899" duration="3239000" />
       <workItem from="1689846158008" duration="840000" />
       <workItem from="1689952354421" duration="7605000" />
-      <workItem from="1690445085684" duration="5136000" />
+      <workItem from="1690445085684" duration="5732000" />
+      <workItem from="1690644362851" duration="1499000" />
+      <workItem from="1691050116212" duration="1252000" />
+      <workItem from="1691054594570" duration="4841000" />
+      <workItem from="1691655132925" duration="1137000" />
     </task>
     <servers />
   </component>
